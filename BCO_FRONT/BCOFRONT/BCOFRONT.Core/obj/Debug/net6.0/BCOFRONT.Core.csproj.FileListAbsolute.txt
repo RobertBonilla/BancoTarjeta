@@ -1,0 +1,15 @@
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\bin\Debug\net6.0\BCOFRONT.Core.deps.json
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\bin\Debug\net6.0\BCOFRONT.Core.dll
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\bin\Debug\net6.0\ref\BCOFRONT.Core.dll
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\bin\Debug\net6.0\BCOFRONT.Core.pdb
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\bin\Debug\net6.0\BCOFRONT.Domain.dll
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\bin\Debug\net6.0\BCOFRONT.Domain.pdb
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\obj\Debug\net6.0\BCOFRONT.Core.csproj.AssemblyReference.cache
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\obj\Debug\net6.0\BCOFRONT.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\obj\Debug\net6.0\BCOFRONT.Core.AssemblyInfoInputs.cache
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\obj\Debug\net6.0\BCOFRONT.Core.AssemblyInfo.cs
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\obj\Debug\net6.0\BCOFRONT.Core.csproj.CoreCompileInputs.cache
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\obj\Debug\net6.0\BCOFRONT.Core.csproj.CopyComplete
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\obj\Debug\net6.0\BCOFRONT.Core.dll
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\obj\Debug\net6.0\ref\BCOFRONT.Core.dll
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_FRONT\BCOFRONT\BCOFRONT.Core\obj\Debug\net6.0\BCOFRONT.Core.pdb

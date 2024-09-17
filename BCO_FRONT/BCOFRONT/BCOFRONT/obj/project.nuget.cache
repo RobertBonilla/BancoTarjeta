@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "k6liCKq4Hgz3a3CtJKbDRKmkRqPW/sJ6+9qkt+4gE9QWIPQgAQJNFRLM5p9cYVLf0IIV7MMwJ1gga74oPbXW3A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Bonilla\\Documents\\Repos\\BCO_APP\\BCO_FRONT\\BCOFRONT\\BCOFRONT\\BCOFRONT.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bonilla\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Bonilla\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Bonilla\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\Bonilla\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\Bonilla\\.nuget\\packages\\restsharp\\112.0.0\\restsharp.112.0.0.nupkg.sha512",
+    "C:\\Users\\Bonilla\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

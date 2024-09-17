@@ -1,0 +1,65 @@
+﻿@model BCOFRONT.Domain.ViewModels.saveViewModel
+@{
+    ViewData["Title"] = "Pago";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <form id="frmPago">
+        <input type="hidden" id="txtTarjeta" value="@Model.tarjeta"/> 
+        <div class="mb-3">
+          <label for="txtTarjetaView" class="form-label">Tarjeta</label>
+          <input type="text" class="form-control" id="txtTarjetaView" placeholder="0000" readonly value="@Model.tarjetaView">
+        </div>
+        <div class="mb-3">
+          <label for="txtFecha" class="form-label">Fecha</label>
+          <input type="date" class="form-control" id="txtFecha" placeholder="" required>
+        </div>
+        <div class="mb-3">
+          <label for="txtMonto" class="form-label">Monto</label>
+          <input type="number" class="form-control" id="txtMonto" placeholder="" required step="0.01">
+        </div>
+        <div class="mb-3">
+         <button type="submit" class="btn btn-primary" onclick="Enviar();">Pagar</button>
+         <button type="button" class="btn btn-light" onclick="Return();" >Cancelar</button>
+        </div>
+  </form>
+</div>
+
+<script>
+    var resultado;
+    function Return() {
+        location.href = '/';
+    }
+    function Enviar() {
+        document.getElementById("frmPago").addEventListener("submit", function(event) { 
+        event.preventDefault();
+        });
+        var form = document.getElementById('frmPago');
+        if (form.checkValidity() === true) {
+        var tarjeta = $("#txtTarjeta").val();
+        var fecha = $("#txtFecha").val();
+        var monto = $("#txtMonto").val();
+        save(tarjeta,fecha,monto); }
+    }
+    function save(tarjeta,fecha,monto) {
+        var urlEndPoint = '@Url.Action("setPago", "Home")';
+        console.log("Ejecutando");
+        $.ajax({
+            url: urlEndPoint,
+            type: 'POST',
+            data: { numeroTarjeta:tarjeta,fecha: fecha,monto:monto},
+            success: function (result) {
+                console.log(result);
+                alert("Pago Realizado con Exito");
+                location.href = '/';
+            },
+            error: function (httpResponse, e) {
+
+            },
+            complete: function (result) {
+
+            }
+        });
+    }
+</script>

@@ -1,0 +1,149 @@
+﻿@model BCOFRONT.Domain.ViewModels.infoTarjetaViewModel
+@{
+    ViewData["Title"] = "Estado Cuenta";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="mb-3 oculto-impresion">
+    <button type="button" class="btn btn-light" onclick="Return();" >Atras</button>
+    <button type="button" class="btn btn-primary" onclick="Imprimir();">Imprimir</button>
+</div>
+<div class="alert alert-info" role="alert">
+  Datos Principales
+</div>
+
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Titular</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="@Model.infoTarjeta.nombres @Model.infoTarjeta.apellidos">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Numero de Tarjeta</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="@Model.infoTarjeta.noTarjeta">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="txtSaldo">Saldo</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="txtSaldo" value="@Model.infoTarjeta.saldo">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="txtSaldo">Limite</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="txtSaldo" value="@Model.infoTarjeta.limite">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="txtSaldo">Disponible</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="txtSaldo" value="@Model.infoTarjeta.disponible">
+</div>
+
+<div class="alert alert-info" role="alert">
+  Datos de Pago
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="txtSaldo">Saldo</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="txtSaldo" value="@Model.infoTarjeta.saldo">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="txtSaldo">Interes Bonificable</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="txtSaldo" value="@Model.infoTarjeta.intBonif">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="txtSaldo">Monto Total a Pagar (Contado)</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="txtSaldo" value="@Model.infoTarjeta.saldo">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="txtSaldo">Monto Total a Pagar con Interes (Contado)</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="txtSaldo" value="@Model.infoTarjeta.saldoInt">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="txtSaldo">Cuota Minima a Pagar</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="txtSaldo" value="@Model.infoTarjeta.minimo">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="txtSaldo">Tasa de Interes Mensual</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="txtSaldo" value="@Model.infoTarjeta.intMensual %">
+</div>
+
+
+<div class="alert alert-info" role="alert">
+  Reporte de Compras
+</div>
+
+<div class="input-group mb-3">
+  <span class="input-group-text" id="txtSaldo">Compras realizadas mes actual</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="txtSaldo" value="@Model.mesActual.cargo">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="txtSaldo">Compras realizadas mes anterior</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="txtSaldo" value="@Model.mesAnterior.cargo">
+</div>
+
+<div class="alert alert-info" role="alert">
+  Detalle de Compras mes Actual
+</div>
+<div>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Referencia</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Monto</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ListaModel in Model.listTransaction)
+            {
+                @if(ListaModel.cargo > 0)
+                {
+                    <tr>
+                        <td>@ListaModel.referencia</td>
+                        <td>@ListaModel.fecha</td>
+                        <td>@ListaModel.descripcion</td>
+                        <td>@ListaModel.cargo</td>
+                    </tr>
+                }
+                
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="alert alert-info" role="alert">
+  Detalle de Pagos mes Actual
+</div>
+
+<div>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Referencia</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Monto</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ListaModel in Model.listTransaction)
+            {
+                @if(ListaModel.abono > 0)
+                {
+                    <tr>
+                        <td>@ListaModel.referencia</td>
+                        <td>@ListaModel.fecha</td>
+                        <td>@ListaModel.descripcion</td>
+                        <td>@ListaModel.abono</td>
+                    </tr>
+                }
+                
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function Return() {
+        location.href = '/';
+    }
+
+    function Imprimir(){
+        window.print();
+    }
+</script>

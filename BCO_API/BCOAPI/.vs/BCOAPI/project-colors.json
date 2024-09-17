@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7293edbf-105d-4a1b-b7f1-d4c5880bc674": {
+      "ProjectGuid": "7293edbf-105d-4a1b-b7f1-d4c5880bc674",
+      "DisplayName": "BCOAPI.Core",
+      "ColorIndex": 0
+    },
+    "032ab55d-04f3-4c72-a573-fcaf66e16371": {
+      "ProjectGuid": "032ab55d-04f3-4c72-a573-fcaf66e16371",
+      "DisplayName": "BCOAPI.Infraestructure",
+      "ColorIndex": 1
+    },
+    "42fdf7cd-9b70-47d5-a483-a7669458c87e": {
+      "ProjectGuid": "42fdf7cd-9b70-47d5-a483-a7669458c87e",
+      "DisplayName": "BCOAPI",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

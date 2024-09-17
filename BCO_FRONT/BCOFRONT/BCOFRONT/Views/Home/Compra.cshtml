@@ -1,0 +1,72 @@
+﻿@model BCOFRONT.Domain.ViewModels.saveViewModel
+@{
+    ViewData["Title"] = "Compra";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <form id="frmCompra">
+        <input type="hidden" id="txtTarjeta" value="@Model.tarjeta"/> 
+        <div class="mb-3">
+          <label for="txtTarjetaView" class="form-label">Tarjeta</label>
+          <input type="text" class="form-control" id="txtTarjetaView" placeholder="0000" readonly value="@Model.tarjetaView">
+        </div>
+        <div class="mb-3">
+          <label for="txtFecha" class="form-label">Fecha</label>
+          <input type="date" class="form-control" id="txtFecha" placeholder="" required>
+        </div>
+        <div class="mb-3">
+          <label for="txtDescripcion" class="form-label">Descripcion</label>
+          <input type="text" class="form-control" id="txtDescripcion" placeholder="" required>
+        </div>
+        <div class="mb-3">
+          <label for="txtMonto" class="form-label">Monto</label>
+          <input type="number" class="form-control" id="txtMonto" placeholder="" required step="0.01">
+        </div>
+        <div class="mb-3">
+         <button type="submit" class="btn btn-primary" onclick="Enviar();">Comprar</button>
+         <button type="button" class="btn btn-light" onclick="Return();" >Cancelar</button>
+        </div>
+  </form>
+</div>
+
+<script>
+    
+    var resultado;
+    function Return() {
+        location.href = '/';
+    }
+    function Enviar() {
+        document.getElementById("frmCompra").addEventListener("submit", function(event) { 
+        event.preventDefault();
+        });
+        var form = document.getElementById('frmCompra');
+        if (form.checkValidity() === true) {
+        var tarjeta = $("#txtTarjeta").val();
+        var fecha = $("#txtFecha").val();
+        var monto = $("#txtMonto").val();
+        var descrip = $("#txtDescripcion").val();
+        save(tarjeta,fecha,monto,descrip);
+        }
+    }
+    function save(tarjeta,fecha,monto,descrip) {
+        var urlEndPoint = '@Url.Action("setCompra", "Home")';
+        console.log("Ejecutando");
+        $.ajax({
+            url: urlEndPoint,
+            type: 'GET',
+            data: { numeroTarjeta:tarjeta,fecha: fecha,monto:monto, descripcion:descrip},
+            success: function (result) {
+                
+                alert("Compra Realizado con Exito");
+                location.href = '/';
+            },
+            error: function (httpResponse, e) {
+                console.log("Compra2");
+            },
+            complete: function (result) {
+                console.log("Compra 3");
+            }
+        });
+    }
+</script>

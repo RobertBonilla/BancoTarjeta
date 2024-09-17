@@ -1,0 +1,41 @@
+﻿@model BCOFRONT.Domain.ViewModels.ClienteViewModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">TU BANCO</h1>
+    <p>Creciendo contigo</a>.</p>
+</div>
+
+<div class="alert alert-primary" role="alert">
+  Bienvenido @Model.clienteDto.nombres @Model.clienteDto.apellidos
+</div>
+<div class="row">
+    @foreach (var item in @Model.listTarjetasClienteDto)
+    {
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+              <img src="https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0036/6308/Tarjetas_Platinum_Argentina_requisitos__beneficios__comparativa.jpg?1581821136" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="list-group">
+                     <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                        @item.marca No: ****-****-****-@item.noTarjetaView
+                      </a>
+                  @using(Html.BeginForm()){
+                        <input type="hidden" name="tarjeta" value="@item.noTarjeta"/> 
+                        <input type="hidden" name="tarjetaView" value="@item.noTarjetaView"/> 
+                        <input type="hidden" name="idCliente" value="@Model.clienteDto.idCliente"/> 
+                        <input type="submit" value="Estado de Cuenta" formaction="@Url.Action("Estado","Home")" class="list-group-item list-group-item-action">
+                        <input type="submit" value="Compras" formaction="@Url.Action("Compra","Home")" class="list-group-item list-group-item-action">
+                        <input type="submit" value="Pagos" formaction="@Url.Action("Pago","Home")" class="list-group-item list-group-item-action">
+                        <input type="submit" value="Historial Transacciones Mes" formaction="@Url.Action("Historial","Home")" class="list-group-item list-group-item-action">
+                    }          
+                </div>
+              </div>
+            </div>
+     </div>
+    }
+    </div>
+    

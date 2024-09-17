@@ -1,0 +1,17 @@
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\bin\Debug\net6.0\BCOAPI.Core.deps.json
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\bin\Debug\net6.0\BCOAPI.Core.dll
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\bin\Debug\net6.0\ref\BCOAPI.Core.dll
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\bin\Debug\net6.0\BCOAPI.Core.pdb
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\bin\Debug\net6.0\BCOAPI.Domain.dll
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\bin\Debug\net6.0\BCOAPI.Infraestructure.dll
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\bin\Debug\net6.0\BCOAPI.Infraestructure.pdb
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\bin\Debug\net6.0\BCOAPI.Domain.pdb
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\obj\Debug\net6.0\BCOAPI.Core.csproj.AssemblyReference.cache
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\obj\Debug\net6.0\BCOAPI.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\obj\Debug\net6.0\BCOAPI.Core.AssemblyInfoInputs.cache
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\obj\Debug\net6.0\BCOAPI.Core.AssemblyInfo.cs
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\obj\Debug\net6.0\BCOAPI.Core.csproj.CoreCompileInputs.cache
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\obj\Debug\net6.0\BCOAPI.Core.csproj.CopyComplete
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\obj\Debug\net6.0\BCOAPI.Core.dll
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\obj\Debug\net6.0\ref\BCOAPI.Core.dll
+C:\Users\Bonilla\Documents\Repos\BCO_APP\BCO_API\BCOAPI\BCOAPI.Core\obj\Debug\net6.0\BCOAPI.Core.pdb
