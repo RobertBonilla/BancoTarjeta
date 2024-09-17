@@ -99,14 +99,21 @@
 [![Infraestructure](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Api_Infraestructure.png "Infraestructure")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Api_Infraestructure.png "Infraestructure")
 
 - Una vista completa a la arquitectura de la Api
+
+
   [![AllApi](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Api_All2.png "AllApi")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Api_All2.png "AllApi")
 
 ## App Front
 
 - Se desarrollo con ASP MVC Net 6
+- Se dividio en capas Core y Domain, para un mayor control
+
+  
+
+
 [![FrontAll](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Front_All.png "FrontAll")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Front_All.png "FrontAll")
 
-- Se dividio en capas Core y Domain, para un mayor control
+
 
 
 
