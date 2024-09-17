@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "ed5f1ed0-459d-4403-9ce0-367436d58b15",
+		"name": "BCOAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14188851"
+	},
+	"item": [
+		{
+			"name": "GetCliente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "idCliente",
+						"value": "s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/Cliente/GetCliente/:idCliente",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"Cliente",
+						"GetCliente",
+						":idCliente"
+					],
+					"variable": [
+						{
+							"key": "idCliente",
+							"value": "2CD3266D-6DFF-45AD-A9E9-B93BCFEA552C"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "infoGeneralTarjeta",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "idCliente",
+						"value": "s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/Reporte/GetInfoGeneral/:noTarjeta",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"Reporte",
+						"GetInfoGeneral",
+						":noTarjeta"
+					],
+					"variable": [
+						{
+							"key": "noTarjeta",
+							"value": "0102020304050506"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HistorialTarjeta",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "idCliente",
+						"value": "s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/Reporte/GetHistorial/:noTarjeta",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"Reporte",
+						"GetHistorial",
+						":noTarjeta"
+					],
+					"variable": [
+						{
+							"key": "noTarjeta",
+							"value": "0102020304050506"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "compra",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numeroTarjeta\": \"0102020304050506\",\r\n  \"monto\": 10,\r\n  \"fecha\": \"2024-09-16T11:45:27\",\r\n  \"descripcion\": \"compra test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/Transaction/Compra",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"Transaction",
+						"Compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pago",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numeroTarjeta\": \"0102020304050506\",\r\n  \"monto\": 10,\r\n  \"fecha\": \"2024-09-16T11:45:27\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/Transaction/Pago",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"Transaction",
+						"Pago"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
