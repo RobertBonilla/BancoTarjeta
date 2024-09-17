@@ -1,4 +1,4 @@
-### Features
+### Caracteristicas
 
 - Proyecto Desarrollado en .Net 6
 - Se desarrollaron 2 aplicaciones, una API y una Aplicación web que la consume
@@ -46,4 +46,84 @@
 
   [![printHistorial](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/test/PrintHistorial.png "printHistorial")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/test/PrintHistorial.png "printHistorial")
 
+### Arquitectura
+
+## Base de Datos
+
+- Diagrama de base de datos
+
+[![Database](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/test/Database.png "Database")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/test/Database.png "Database")
+
+
+- Funcion para obtener el ID de la tarjeta mediante su numero de tarjeta, se pudo validar mas, pero se hizo a modo de ejemplo
+
+[![tarjetaId](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/DB/getTarjetaId.png "tarjetaId")](http://https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/DB/getTarjetaId.png "tarjetaId")
+
+- Verificar Transaccion, para antes de ingresar un cargo, verificar que la tarjeta cuente con disponible necesario
   
+[![VerificarTransaccion](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/DB/verificarTransaccion.png "VerificarTransaccion")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/DB/verificarTransaccion.png "VerificarTransaccion")
+
+- Cargo Tarjeta, para validar el cargo utilizando las funciones anteriores
+  
+[![cargoTarjeta](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/DB/cargoTarjeta.png "cargoTarjeta")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/DB/cargoTarjeta.png "cargoTarjeta")
+
+- Abono Tarjeta, para verificar el abono correcto
+
+  [![AbonoTDC](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/DB/abonoTarjeta.png "AbonoTDC")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/DB/abonoTarjeta.png "AbonoTDC")
+
+  ## API Net 6
+
+- Se desarrollo en capas, como se muestra acontinuación
+
+[![APIAll](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Api_All.png "APIAll")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Api_All.png "APIAll")
+
+- Aplicacion Principal, contiene los controladores y el archivo de configuracion principal, desde donde se realiza la injeccion de dependencias y los llamados a los servicios
+  
+  [![ApiBase](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/Arquitectura_API_base.png "ApiBase")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/Arquitectura_API_base.png "ApiBase")
+
+- ApiCore, en esta capa se mueve la logica del negocio, se ejecutan los procesos importantes, se hace a travez de injeccion de dependencias
+  
+[![ApiCore](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/Arquitectura_API_Core.png "ApiCore")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/Arquitectura_API_Core.png "ApiCore")
+
+- Domain, se almacenan los Dto y Entidades, que manejara principalmente la capa de infraestructura
+- Destacar que en esta capa se incluyeron los Handlers, pertenecientes a CQRS, para tener una mejor mediacion
+- para CQRS se utilizo Mediator
+  
+[![Domain](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Api_Domain.png "Domain")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Api_Domain.png "Domain")
+
+- Infraestructure, la capa de datos
+- Cabe destacar que para este ejemplo se utilizaron 2 tipos de Infraestructure
+- Por un lado CQRS, se pueden ver los Queries
+- Por otro lado con DBContext y DependencyInjection
+  
+[![Infraestructure](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Api_Infraestructure.png "Infraestructure")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Api_Infraestructure.png "Infraestructure")
+
+- Una vista completa a la arquitectura de la Api
+  [![AllApi](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Api_All2.png "AllApi")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Api_All2.png "AllApi")
+
+## App Front
+
+- Se desarrollo con ASP MVC Net 6
+[![FrontAll](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Front_All.png "FrontAll")](https://github.com/RobertBonilla/BancoTarjeta/blob/TestDocumentation/Documentacion/capturas/Code/arquitectura_Front_All.png "FrontAll")
+
+- Se dividio en capas Core y Domain, para un mayor control
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
